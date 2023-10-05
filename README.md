@@ -1,5 +1,5 @@
-# Work in progress introduction to HPC self service online course materials
+# WIP: High Performance Computing and Society 
 
-Uses the Coderefinery Sphinx template:
+Introduction to HPC for life long learners via self service online course materials. 
 
-https://github.com/coderefinery/sphinx-lesson
+Uses the Coderefinery Sphinx template: https://github.com/coderefinery/sphinx-lesson
