@@ -64,9 +64,10 @@ Since 1990, EPCC has developed a reputation for leading-edge capability in all a
 
 With a team of more than 110 highly qualified specialists, we have an exceptional pool of talent. Our engineers and technical staff have a powerful combination of practical and theoretical knowledge that keeps EPCC at the forefront of industry and research.
 
+<!-- This is duplicated in Part 1 and I think is more important to be placed there. 
 ```{raw} html
 <iframe width="700" height="400" src="https://www.youtube.com/embed/NEgbVNIo560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-```
+``` -->
 
 **EPCC aims to accelerate the effective exploitation of novel computing throughout industry, academia and commerce.**
 
