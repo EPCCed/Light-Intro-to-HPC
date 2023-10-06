@@ -19,7 +19,7 @@ To begin, let's watch this UKRI video where Prof. Mark Parsons, Director of EPCC
 This video shows you what a real supercomputer might look like and highlights some of the complexities required to support such systems. Later on in the course, we will explain the different hardware components of a supercomputer and what makes them different to general-purpose computers.
 
 <!-- Can I format this so it pops out like a note? -->
-Note: The term "High Performance Computing" or "HPC" is used commonly throughout the video and this course. In the field of supercomputing, HPC is a general term that includes all the activities and components associated with supercomputers, including aspects such as software and data storage as well as the bare supercomputer hardware.
+> Note: The term "High Performance Computing" or "HPC" is used commonly throughout the video and this course. In the field of supercomputing, HPC is a general term that includes all the activities and components associated with supercomputers, including aspects such as software and data storage as well as the bare supercomputer hardware.
 
 
 ```{figure} ./images/large_hero_5149d40f-0a9b-42af-a930-413d00bc1c6c.jpg
@@ -47,7 +47,7 @@ However, some problems are actually too large, too distant or too dangerous to s
 Instead, scientists can develop computer simulations to perform experiments on the real world in a virtual environment on a computer. Compared to disciplines such as chemistry, biology and physics the study of computer science is a relatively new area of research which has been around for a matter of decades rather than centuries. This new area, which many view as a third pillar of science extending the two traditional approaches of theory and experiment, is called **computational science**.
 
 <!-- Can I format this so it pops out like a note? -->
-Note: It’s important to be clear about the difference between computational science and computer science. Computer science is the scientific study of computers: it is through the work of computer scientists that we have the hardware and software required to build and operate today’s supercomputers. In computational science, however, we use these supercomputers to run computer simulations and make predictions about the real world. 
+> Note: It’s important to be clear about the difference between computational science and computer science. Computer science is the scientific study of computers: it is through the work of computer scientists that we have the hardware and software required to build and operate today’s supercomputers. In computational science, however, we use these supercomputers to run computer simulations and make predictions about the real world. 
 
 It is important to understand that large-scale computer simulation has applications in industry, applied engineering and commerce as well as academia. Modern cars and aeroplanes are designed and tested almost entirely by computer before they are ever constructed. A new car must pass crash safety tests before going to market: destructive testing of a new car is an expensive process in itself, but not nearly as expensive as having to redesign it should it fail the test. Computer simulation enables us to design new products that are much more likely to work correctly the very first time they are built.
 
@@ -122,7 +122,7 @@ Wee ARCHIE is a suitcase-sized supercomputer designed and built to explain what 
 
 We will return to Wee ARCHIE next week and use it, and its big brother ARCHER, to explain the hardware details of supercomputers.
 
-You can find instructions on how to configure your very own Raspberry Pi cluster [here](https://epcced.github.io/wee_archlet/).-->
+You can find instructions on how to configure your very own Raspberry Pi cluster [here](https://epcced.github.io/wee_archlet/). -->
 
 ---
 
