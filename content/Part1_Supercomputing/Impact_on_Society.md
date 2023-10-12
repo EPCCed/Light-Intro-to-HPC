@@ -46,7 +46,9 @@ This is the Winning Early Career Researcher entry from 2023!
 
 Supercomputers play a vital role in weather prediction and climate modeling. They help meteorologists understand and forecast severe weather events, track hurricanes, and study long-term climate patterns. Accurate weather predictions are crucial for disaster preparedness and climate change mitigation. 
 
+```{raw} html
 <iframe width="700" height="400" src="https://youtu.be/YXL5Vu046wU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
 
 **The Galewsky Jet with a moving mesh by Dr Jack Betteridge, Imperial College London, Mathematics**
 
