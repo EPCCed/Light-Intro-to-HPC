@@ -1,4 +1,4 @@
-# Understanding Supercomputers 
+# Understanding Supercomputing 
 <!-- This is a long part, might want to split this info up into multiple parts -->
 <!-- Add a 'test' at the end? -->
 
