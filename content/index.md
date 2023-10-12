@@ -4,7 +4,7 @@
 
 ## About the course
 
-This course aims to introduce users to the world of supercomputing, how it affects society, our every day lives and the how the hardware, software and operating environments differ from the computing systems that you may find in the average household. This course will hopefully explain the benefits that high performance computing can offer both of terms of performance and the scale of calculations that it allows us to undertake. 
+This course aims to introduce users to the world of supercomputing and the impact of supercomputing on society. We will cover supercomputing fundamentals, applications, hardware and operating environments. This course will explain the benefits that high performance computing can offer both of terms of performance and the scale of calculations that it allows us to undertake.
 
 ## Who is the course for?
 

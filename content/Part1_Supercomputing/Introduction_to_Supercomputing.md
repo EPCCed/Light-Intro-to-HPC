@@ -59,24 +59,10 @@ It’s important to be clear about the difference between computational science 
 
 It is important to understand that large-scale computer simulation has applications in industry, applied engineering and commerce as well as academia. Modern cars and aeroplanes are designed and tested almost entirely by computer before they are ever constructed. A new car must pass crash safety tests before going to market: destructive testing of a new car is an expensive process in itself, but not nearly as expensive as having to redesign it should it fail the test. Computer simulation enables us to design new products that are much more likely to work correctly the very first time they are built.
 
-### Examples 
-
-<!-- Include some ARCHER2 Image Competition entries here -->
-
-```{figure} ./images/large_hero_e0df48e4-9b4d-422c-a18f-d7898b9578d8.jpg
-
-Computer simulation covering multiple physical phenomena and machine learning algorithms can predict how dinosaurs might have moved. The laws of physics apply for extinct animals exactly as they do for living ones.
-
-© 2016 ARCHER image competition
-```
-
 ## How do supercomputers work? 
 
-<!-- Need an intro sentance, maybe based on the examples? -->
+<!-- Need an intro sentence, maybe based on the examples? -->
 <!-- How do they work? How are they faster than a general-purpose computer?  -->
-
-
-### Number crunching
 
 The main application for supercomputers is to perform large-scale numerical computations. Let's look at some simple calculations: 
 

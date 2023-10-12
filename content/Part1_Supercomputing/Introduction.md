@@ -1,4 +1,4 @@
-# Part 1: Introduction to Supercomputing and Society
+# Welcome to Part 1
 
 In this part you will be introduced to supercomputing and its signifiance in society. We will give an overview of High Performance Computing (HPC), highlighting the evolution of supercomputers and their impact on scientific research, engineering and societal advancements. We will also introduce you to some of the key terminology and the basics of computing along the way. 
 
