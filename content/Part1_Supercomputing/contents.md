@@ -1,4 +1,4 @@
-# Supercomputing Introduction
+# Introduction to Supercomputing 
 
 ```{toctree}
 ---

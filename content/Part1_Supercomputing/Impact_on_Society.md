@@ -43,7 +43,8 @@ This is the winning image entry from the 2022 ARCHER2 competition and the overal
 
 Supercomputing plays a crucial role in engineering and design processes. It allows engineers to simulate and test complex systems, such as aircraft designs, bridges, and energy systems, before physical prototypes are built. This reduces costs, improves safety, and drives innovation.
 
-```{figure} ./images/53104947273_1c81a1a854_c.jpg 
+```{raw} html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TpClNdfnkn4?si=rTzsJgaQvvAlP98Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
 **Unsteady Flow Over Random Urban-like Obstacles: A Large Eddy Simulation using uDALES 2.0 Codebase by Dr Dipanjan Majumdar, Imperial College London, Civil and Environmental Engineering Department**
