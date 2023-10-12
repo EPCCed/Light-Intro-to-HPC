@@ -19,8 +19,11 @@ To begin, let's watch this UKRI video where Prof. Mark Parsons, Director of EPCC
 This video shows you what a real supercomputer might look like and highlights some of the complexities required to support such systems. Later on in the course, we will explain the different hardware components of a supercomputer and what makes them different to general-purpose computers.
 
 <!-- Can I format this so it pops out like a note? -->
-> [!NOTE]
-> The term "High Performance Computing" or "HPC" is used commonly throughout the video and this course. In the field of supercomputing, HPC is a general term that includes all the activities and components associated with supercomputers, including aspects such as software and data storage as well as the bare supercomputer hardware.
+```{note}
+
+The term "High Performance Computing" or "HPC" is used commonly throughout the video and this course. In the field of supercomputing, HPC is a general term that includes all the activities and components associated with supercomputers, including aspects such as software and data storage as well as the bare supercomputer hardware.
+
+```
 
 
 ```{figure} ./images/large_hero_5149d40f-0a9b-42af-a930-413d00bc1c6c.jpg
@@ -48,8 +51,11 @@ However, some problems are actually too large, too distant or too dangerous to s
 Instead, scientists can develop computer simulations to perform experiments on the real world in a virtual environment on a computer. Compared to disciplines such as chemistry, biology and physics the study of computer science is a relatively new area of research which has been around for a matter of decades rather than centuries. This new area, which many view as a third pillar of science extending the two traditional approaches of theory and experiment, is called **computational science**.
 
 <!-- Can I format this so it pops out like a note? -->
-> [!NOTE]
-> It’s important to be clear about the difference between computational science and computer science. Computer science is the scientific study of computers: it is through the work of computer scientists that we have the hardware and software required to build and operate today’s supercomputers. In computational science, however, we use these supercomputers to run computer simulations and make predictions about the real world. 
+```{note}
+
+It’s important to be clear about the difference between computational science and computer science. Computer science is the scientific study of computers: it is through the work of computer scientists that we have the hardware and software required to build and operate today’s supercomputers. In computational science, however, we use these supercomputers to run computer simulations and make predictions about the real world. 
+
+```
 
 It is important to understand that large-scale computer simulation has applications in industry, applied engineering and commerce as well as academia. Modern cars and aeroplanes are designed and tested almost entirely by computer before they are ever constructed. A new car must pass crash safety tests before going to market: destructive testing of a new car is an expensive process in itself, but not nearly as expensive as having to redesign it should it fail the test. Computer simulation enables us to design new products that are much more likely to work correctly the very first time they are built.
 
@@ -84,9 +90,9 @@ or
 
 To solve these equations, you don’t need a supercomputer, in fact you don’t even need a personal computer as pencil-and-paper or a simple calculator can do the job. 
 
-What if you needed to solve 1 000 of these calculations? It would take a very long time when using pencil-and-paper, instead you might want to use a general-purpose computer to speed things up. 
+What if you needed to solve 1,000 of these calculations? It would take a very long time when using pencil-and-paper, instead you might want to use a general-purpose computer to speed things up. 
 
-What if you wanted to predict tomorrow's weather? Weather-forecasting simulations are fundamentally based on simple numerical calculations that could each be done on a calculator. However, the sheer size of these computations and the levels of accuracy required means that almost unimaginably large numbers of individual calculations are needed to do the job. To produce an accurate weather forecast, the total number of calculations required is measured in the quintillions, where a quintillion is one with 18 zeroes after it: 1 000 000 000 000 000 000 !
+What if you wanted to predict tomorrow's weather? Weather-forecasting simulations are fundamentally based on simple numerical calculations that could each be done on a calculator. However, the sheer size of these computations and the levels of accuracy required means that almost unimaginably large numbers of individual calculations are needed to do the job. To produce an accurate weather forecast, the total number of calculations required is measured in the quintillions, where a quintillion is one with 18 zeroes after it: 1,000,000,000,000,000,000!
 
 Computations like this could take several days, weeks or years to finish. Do you want to wait while you can’t do anything else because the computation uses up all the resources of your computer? Are you prepared to wait for years before being able to collect all the results? Probably not, especially if the result you’re after is tomorrow’s weather. This is where supercomputers come into their own, finishing a job within a few hours or days when it would take many years on a general-purpose computer.
 
