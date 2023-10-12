@@ -28,7 +28,9 @@ Supercomputing plays a crucial role in engineering and design processes. It allo
 
 Supercomputing aids in medical research, drug discovery, and personalized medicine. It enables researchers to analyze vast amounts of genomic data, simulate the behavior of biological systems, and develop more effective treatments for diseases.
 
+```{raw} html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_Lt5VcpAF7U?si=npevHQ0u0SkozjNX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
 <!-- https://youtu.be/_Lt5VcpAF7U -->
 
 **Silico model for assessing individual responses to irregular heart rhythm treatments, by Carlos Edgar Lopez Barrera, Queen Mary University of London, SEMS**
