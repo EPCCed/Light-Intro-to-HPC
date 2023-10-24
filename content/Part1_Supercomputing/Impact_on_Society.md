@@ -1,9 +1,13 @@
 # The Impact of Supercomputing on Society 
 <!-- Should I edit the wording to make the research more accessible, or is it okay to leave as high-level examples?-->
+<!-- Should we rename this? -->
 
-Supercomputing has a transformative impact on society by driving scientific progress, enabling advanced simulations and calculations, and addressing complex societal challenges across multiple domains. Let's have a look at some of the key ways. 
+Supercomputing has a transformative impact on society by driving scientific progress, enabling advanced simulations and calculations, and addressing complex societal challenges across multiple domains. Let's have a look at some examples. 
 
-Throughout this part you will see images from the ARCHER2 community. [ARCHER2](https://www.archer2.ac.uk/) is the UK National Supercomputing Service, it is a world class advanced computing resource for UK researchers. ARCHER2 is provided by UKRI, EPCC, HPE Cray and the University of Edinburgh.
+```{note}
+All of these images are from the ARCHER2 community! [ARCHER2](https://www.archer2.ac.uk/) is the UK National Supercomputing Service, hosted by EPCC at the University of Edinburgh.
+```
+
 
 <!-- Can we just use these? https://www.archer2.ac.uk/research/case-studies/ -->
 

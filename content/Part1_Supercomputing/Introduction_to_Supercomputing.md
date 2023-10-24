@@ -1,16 +1,9 @@
-<!-- Need to link these sections into later sections -->
-<!-- Would like this introduction to be an overview of what is to come. -->
-<!-- Also, how do I make it less boring and wordy? -->
-
 # Introduction to Supercomputing
-
-<!-- After completing, reword and check this...  -->
-In this part you will be introduced to the key principles of supercomputing: 
 * What is a supercomputer? 
 * Why do we need them? 
 * What do they do? 
 
-To begin, let's watch this UKRI video where Prof. Mark Parsons, Director of EPCC, gives an overview of why high performance computing is an important aspect of modern scientific research. 
+To begin to answer these questions, let's watch this UKRI video where Prof. Mark Parsons, Director of EPCC, gives an overview of why high performance computing is an important aspect of modern scientific research. 
 
 ```{raw} html
 <iframe width="700" height="400" src="https://www.youtube.com/embed/NEgbVNIo560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -18,7 +11,6 @@ To begin, let's watch this UKRI video where Prof. Mark Parsons, Director of EPCC
 
 This video shows you what a real supercomputer might look like and highlights some of the complexities required to support such systems. Later on in the course, we will explain the different hardware components of a supercomputer and what makes them different to general-purpose computers.
 
-<!-- Can I format this so it pops out like a note? -->
 ```{note}
 
 The term "High Performance Computing" or "HPC" is used commonly throughout the video and this course. In the field of supercomputing, HPC is a general term that includes all the activities and components associated with supercomputers, including aspects such as software and data storage as well as the bare supercomputer hardware.
@@ -32,19 +24,19 @@ The term "High Performance Computing" or "HPC" is used commonly throughout the v
 
 ## What is a supercomputer? 
 
-A supercomputer is a high performance computing (HPC) system, essentially a computer with very high-level computational capabilities in comparison to a general-purpose computer such as a personal desktop or laptop. Throughout the history of supercomputing, the definition of a supercomputer has been a moving target - today’s laptop would have been a supercomputer only a couple of decades ago! But, no matter how fast today’s general-purpose computers are, there will always be a need for more powerful machines. 
+A supercomputer is a high performance computing (HPC) system -> essentially a computer with very high-level computational capabilities in comparison to a general-purpose computer (a personal desktop or laptop). Throughout the history of supercomputing, the definition of a supercomputer has been a moving target - today’s laptop would have been a supercomputer only a couple of decades ago! But, no matter how fast today’s general-purpose computers are, there will always be a need for more powerful machines. 
 
 
 ## Why do we need supercomputers? 
 
 <!-- Maybe want to reword this... -->
-Over recent decades, computers continue to become larger and more powerful. But, why do we need computers with such high levels of computational power? Why do we need to keep pushing for higher performance computing? 
+Over recent decades, computers continue to become larger and more powerful. But, why do we need computers with such high levels of computational power? Why do we need to keep pushing for *higher* performance computing? 
 
-First, let's look at what these supercomputers are actually doing. 
+To answer these questions we first need to look at what these supercomputers are actually doing. 
 
 ### The third pillar of science
 
-To do science in the real world we often have to build complicated instruments for each experiment: vast telescopes for astronomers to look deep into space, powerful particle accelerators so physicists can smash atoms together at almost the speed of light, enormous wind tunnels where engineers can study how an aeroplane wing will operate in flight.
+To do science in the real world we often have to build complicated instruments for each experiment: vast telescopes for astronomers to look deep into space, powerful particle accelerators so physicists can smash atoms together at almost the speed of light, or enormous wind tunnels where engineers can study how an aeroplane wing will operate in flight.
 
 However, some problems are actually too large, too distant or too dangerous to study directly: we cannot experiment on the earth’s weather to study climate change, we cannot travel thousands of light years into space to watch two galaxies collide, and we cannot dive into the centre of the sun to measure the nuclear reactions that generate its enormous heat. 
 
@@ -57,12 +49,11 @@ It’s important to be clear about the difference between computational science 
 
 ```
 
-It is important to understand that large-scale computer simulation has applications in industry, applied engineering and commerce as well as academia. Modern cars and aeroplanes are designed and tested almost entirely by computer before they are ever constructed. A new car must pass crash safety tests before going to market: destructive testing of a new car is an expensive process in itself, but not nearly as expensive as having to redesign it should it fail the test. Computer simulation enables us to design new products that are much more likely to work correctly the very first time they are built.
+Large-scale computer simulation has applications in industry, applied engineering and commerce as well as academia. Modern cars and aeroplanes are designed and tested almost entirely by computer before they are ever constructed. A new car must pass crash safety tests before going to market: destructive testing of a new car is an expensive process in itself, but not nearly as expensive as having to redesign it should it fail the test. Computer simulation enables us to design new products that are much more likely to work correctly the very first time they are built.
 
 ## How do supercomputers work? 
 
-<!-- Need an intro sentence, maybe based on the examples? -->
-<!-- How do they work? How are they faster than a general-purpose computer?  -->
+<!-- Need an intro sentence? Maybe based on the examples? -->
 
 The main application for supercomputers is to perform large-scale numerical computations. Let's look at some simple calculations: 
 

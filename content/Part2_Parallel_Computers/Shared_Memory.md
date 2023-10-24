@@ -1,24 +1,23 @@
-# How does your laptop work?
+# Parallel Computers
+<!-- # How does your laptop work? -->
 
-In a sense, your personal laptop is a mini supercomputer because it is a parallel computer with the same essential components: a processor, Random Access Memory (RAM) for temporary storage of data and a hard-disk for long-term storage of programs and files. However, there is a key difference in the way the memory is configured. 
+In a sense, your personal laptop is actually a mini supercomputer because it is a *parallel computer*. Both have the same essential components: a processor, Random Access Memory (RAM) for temporary storage of data and a hard-disk for long-term storage of programs and files. However, there is a key difference in the way the memory is configured - this is what we will be discussing over the next few parts. 
 
-First, let's explore how your laptop works. 
+First, let's explore how your laptop works in parallel. 
 
 ## What do modern CPUs look like? 
 
 To discuss how the modern CPU evolved, let's recap Moore's Law. 
 
-Moore's law was the obsevation and prediction made in 1965 that **"every two years, the CPU clock frequency doubled."**. This was because CPU manufacturers were doubling the density of transisors on a CPU and therefore doubling the CPU Clock frequency. 
+Moore's law was the observation made in 1965 that **"every two years, the CPU clock frequency doubled."**. This was because CPU manufacturers were doubling the density of transisors on a CPU and therefore doubling the CPU Clock frequency. However, around 2005, the increase in clock speed stopped and frequencies started to plateau at around a couple of GHz. The reason was simple: the amount of electrical power required to run processors at these speeds had become so large that they were becoming too hot for the domestic market (could not be cooled by a simple fan) and too expensive to run for the commercial market (large electricity bills and expensive cooling infrastructure). So, manufacturers needed to innovate and find other ways to make their computers go faster. 
 
-However, around 2005, the increase in clock speed stopped and frequencies started to plateau at around a couple of GHz. The reason was simple: the amount of electrical power required to run processors at these speeds had become so large that they were becoming too hot for the domestic market (could not be cooled by a simple fan) and too expensive to run for the commercial market (large electricity bills and expensive cooling infrastructure).
+**Hence, the multicore CPU was invented.** Instead of doubling the number of transistors on a CPU, manufacturers put two CPUs on the same silicon chip. This was again doubled to 4, 8, 16, 32 and more! Now, Moore's Law can be interpreted as: **“Every two years, the number of CPU-cores in a processor now doubles.”**
 
-So, manufacturers needed to innovate and find other ways to make their computers go faster. Hence, the multicore CPU was invented. Instead of doubling the number of transistors on a CPU, manufacturers put two CPUs on the same silicon chip. This was again doubled to 4, 8, 16, 32 and more! 
+```{note}
+Let's review the terminology: for the remainder of this course we will refere to entire multicore CPUs (i.e. silicon chips with more than one CPU on them) as CPUs or processors. To avoid confusion, we will call each individual CPU a CPU-core. So, a quad-core CPU (or quad-core processor) has four CPU-cores.
+```
 
-Now, Moore's Law can be interpreted as: **“Every two years, the number of CPU-cores in a processor now doubles.”**
-
-> Let's review the terminology: for the remainder of this course we will refere to entire multicore CPUs (i.e. silicon chips with more than one CPU on them) as CPUs or processors. To avoid confusion, we will call each individual CPU a CPU-core. So, a quad-core CPU (or quad-core processor) has four CPU-cores.
-
-We now have two complementary ways of building a parallel computer: we can build a single multicore computer using a processor with many CPU-cores, or we can take lots of separate computers, each with their own processor and memory, and link them together using a high-speed network. These two approaches are called the ***shared-memory architecture*** and the **distributed-memory architecture** and we will now look at them in detail.
+We now have two complementary ways of building a parallel computer: we can build a single multicore computer using a processor with many CPU-cores, or we can take lots of separate computers, each with their own processor and memory, and link them together using a high-speed network. These two approaches are called  **shared-memory architecture** and **distributed-memory architecture** and we will now look at them in detail.
 
 What do you think the main differences between these two approaches are? Can you think of any advantages and/or disadvantages for both of them?
 
@@ -31,13 +30,13 @@ The fundamental feature of a shared-memory computer is that all the CPU-cores ar
 ```{figure} ./images/hero_2160d5f2-d404-4b10-b77e-e7b2a04ac529.png
 ```
 
-This is achieved by having a memory bus that takes requests for data from multiple sources (here, each of the four separate CPU-cores) and fetches the data from a single piece of memory. The term bus apparently comes from the Latin omnibus meaning for all, indicating that it is a single resource shared by many CPU-cores.
+This is achieved by having a memory bus that takes requests for data from multiple sources (here, each of the four separate CPU-cores) and fetches the data from a single piece of memory. The term bus comes from the Latin omnibus meaning for all, indicating that it is a single resource shared by many CPU-cores.
+
+A good analogy here is to think of four office-mates or workers (the CPU-cores) sharing a single office (the computer) with a single whiteboard (the memory). Each worker has their own set of whiteboard pens and an eraser, but they are not allowed to talk to each other: they can only communicate by writing to and reading from the whiteboard.
 
 ```{figure} ./images/hero_55c8a23e-686f-42a9-b7e9-de0a12208486.jpg
 © iStock.com/oonal
 ```
-
-A good analogy here is to think of four office-mates or workers (the CPU-cores) sharing a single office (the computer) with a single whiteboard (the memory). Each worker has their own set of whiteboard pens and an eraser, but they are not allowed to talk to each other: they can only communicate by writing to and reading from the whiteboard.
 
 Later on, we’ll start to think about how we can use this shared whiteboard to get the four workers to cooperate to solve the same problem more quickly than they can do it alone. However, the analogy already illustrates two key limitations of this approach:
 
@@ -51,8 +50,6 @@ An overcrowded office clearly illustrates the fundamental challenges of this app
 ```{note}
 
 Despite its limitations, shared memory architectures are universal in modern processors. What do you think the advantages are?
-
-Think of owning one quad-core laptop compared to two dual-core laptops - which is more useful to you and why?
 ```
 
 
@@ -70,17 +67,15 @@ If we’re a bit less ambitious and think about several hundred people rather th
 
 We’ll revisit this problem in much more detail later but you know enough already to start thinking about the fundamental issues.
 
-## How does your laptop work?
+## Why do I need a multicore laptop?
 
 Your laptop will have a processor with multiple cores, Random Access Memory (RAM) for temporary storage of data and a hard-disk for long-term storage of programs and files. 
 
-### Why do I need a multicore laptop?
-
-You might think the answer is obvious: surely two CPU-cores will run my computer program twice as fast as a single CPU-core? Well, it may not be apparent until we cover how to parallelise a calculation in the next part, but it turns out that this is not the case. It usually requires manual intervention to enable a computer program to take advantage of multiple CPU-cores. Although this is possible to do, it certainly wouldn’t have been the case in 2005 when multicore CPUs first became commonplace.
+You might think the answer to our question is obvious: surely two CPU-cores will run my computer program twice as fast as a single CPU-core? Well, it may not be apparent until we cover how to parallelise a calculation in the next part, but it turns out that this is not the case. It usually requires manual intervention to enable a computer program to take advantage of multiple CPU-cores. Although this is possible to do, it certainly wouldn’t have been the case in 2005 when multicore CPUs first became commonplace.
 
 So what is the advantage for a normal user who is not running parallel programs? 
 
-### Operating system
+## Operating system
 
 The important point is that, as a user, you don’t actually say please run this program on that CPU-core. There is a piece of software that sits between you and the hardware that isolates you from direct access to the CPU-cores, memory etc. This is called the the Operating System or OS. There are several common OS’s around today - e.g. Windows, macOS, Linux and Android - but they all perform the same basic function: you ask the OS to execute a program, and it then decides if and when to actually run it on a physical CPU-core.
 
@@ -103,7 +98,7 @@ So, for home use, the Operating System does everything for us, running many sepa
 In your opinion what are the downsides of this more advanced ‘single-core computer’ approach?
 
 
-### In practice: how your laptop uses multiple CPU-cores
+## In practice: how your laptop uses multiple CPU-cores
 
 <iframe id="kaltura_player" width="700" height="400" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_3g4n1c0n&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_vf0ln82e" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Laptop_Multiple_CPU-cores_hd"></iframe>
 

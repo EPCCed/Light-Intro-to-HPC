@@ -3,11 +3,11 @@
 <!-- WIP: need to check this once the content has been completed -->
 <!-- This is being designed for life long learners: members of the general public with a broad interest in computing and in learning for wellbbeing. Need to include some text about WHO this is for? -->
 
-This course aims to introduce the key principles of high performance computing (HPC) and lead a discussion about the importantance of supercomputers (HPC systems) to society. 
+This course aims to introduce the key principles of a concept called High Performance Computing (HPC) and lead us into a discussion about the importantance of supercomputers, or HPC systems, to society. 
 
-This will start with a discussion about how supercomputers are different to personal computers or laptops, their purpose, their history and trends in modern supercomputing. We will then cover material on the fundamentals of using HPC and performing calculations in parallel, leading into a discussion about performance and distributed memory architectures. 
+This will start with highlighting how supercomputers are different to personal computers/laptops and introduce the need for supercomputing in society. We will then cover material on the fundamentals of using HPC and performing calculations in parallel, leading into a discussion about performance and distributed memory architectures. We will summarise by presenting modern trends in supercomputing and predicting what might come next. 
 
-Throughout this course we will highlight real-world examples and the impact supercomputing has on society and our every day lives.
+Throughout this course you will see images from the ARCHER2 community to showcase the research making an impact on the world around us. [ARCHER2](https://www.archer2.ac.uk/) is the UK National Supercomputing Service, it is a world class advanced computing resource for UK researchers. ARCHER2 is provided by UKRI, EPCC, HPE Cray and the University of Edinburgh.
 
 <!-- How do people get an account? For life long learners will I need to provide instructions? -->
 ```{prereq}
@@ -48,7 +48,7 @@ This course has already run in other forms in the past and we are keen the mater
 
 This may be the first self-service course you have worked through, so to help you get the best learning experience we have prepared a few tips for you. Hopefully, they will help you get the most out of the course.
 
-The course material is presented as a mixture of videos, articles, exercises and quizzes. The course is no longer fully facilitated so we would like to encourage you to interact with others taking the course if many of your local team are working through the content. If there is anything that you find confusing, ask, and if you know an answer to a question, answer it. You will find that both asking and answering questions helps to consolidate not only your but also other people’s knowledge.
+The course material is presented as a mixture of videos, articles, exercises and quizzes. The course is no longer fully facilitated but if there is anything that you find confusing, ask, we are available via the [ARCHER2 service desk](helpdesk@archer2.ac.uk). You will find that both asking and answering questions helps to consolidate your knowledge!
 
 ---
 

@@ -1,17 +1,14 @@
 # Understanding the World of Supercomputing 
-<!-- This is a long part, might want to split this info up into multiple parts -->
-<!-- Add a 'test' at the end? -->
-
-The first supercomputers were introduced in the 1960s and have become invaluable for modern scientific research. The field of supercomputing has been accelerating ever since: the fastest supercomputer today is over 300 billion times faster than the first supercomputer. Later, we will discuss current trends and introduce a concept called Moore's Law. First, in order to discuss the history and evolution of supercomputers, we need to introduce a few key concepts. 
+The first supercomputers were introduced in the 1960s and have become invaluable for modern scientific research. The field of supercomputing has been accelerating ever since: the fastest supercomputer today is over 300 billion times faster than the first supercomputer. Later, we will discuss current trends and introduce a concept called Moore's Law which forecasted the vast acceleration in computational power. But first, in order to discuss the history and evolution of supercomputers, we need to introduce a few key concepts. 
 <!-- 3 MFlop/s vs 1 ExaFlop/s = 1,000,000,000,000,000,000/3,000,000 = 333,333,333,333 -->
-<!-- Can we include a picture of an actual CPU? -->
 
 
 ## From laptops to supercomputers
-<!-- Where do we intro memory? -->
 It may surprise you to learn that supercomputers are built using the same basic elements that you normally find in your laptop: processors, memory and disk. The difference is largely a matter of scale. 
 
-Let's start by looking at the most essential component of any computer: the **processor**. The processor, also commonly referred to as the CPU or Central Processing Unit, can be considered the brain of a computer as it carries out the instructions of a computer program. The slightly confusing thing is that a modern CPU actually contains several independent 'brains'; it is a collection of several separate processing units. Each independent processing unit is called a CPU-core or just core.
+Let's start by looking at the most essential component of any computer: the **processor**. The processor, also commonly referred to as the CPU or Central Processing Unit, can be considered the brain of a computer as it carries out the instructions of a computer program. The slightly confusing thing is that a modern CPU actually contains several independent 'brains'; it is a collection of several separate processing units. Each independent processing unit is called a CPU-core or just core. 
+<!-- This is discussed in Part2 section 1 -->
+<!-- Include pic of CPU? -->
 
 A modern domestic device (e.g. a laptop, mobile phone or tablet) will usually have a few CPU-cores (around 6 or 8), while a supercomputer has tens or hundreds of thousands of CPU-cores. This is really where a supercomputer get it's power from: many CPU-cores working together at the same time, working in **parallel**. Conversely, the mode of operation you are familiar with from everyday computing, in which a single CPU-core is doing a single computation, is called serial computing.
 
@@ -39,14 +36,16 @@ So far, we have been discussing how supercomputers are "powerful". But how do we
 
 Now, let's introduce the concept of performance. 
 
-In supercomputing, we are normally interested in numerical computations: what is the answer to 0.234 + 3.456, or 1.4567 x 2.6734? Computers store numbers like these in floating-point format, so they are called floating-point numbers. A single instruction like addition or multiplication is called an operation, so we measure the speed of supercomputers in terms of floating-point operations per second or Flop/s, which is sometimes written and said more simply as Flops.
+In supercomputing, we are normally interested in numerical computations: what is the answer to 0.234 + 3.456, or 1.4567 x 2.6734? Computers store numbers like these in floating-point format, so they are called floating-point numbers. A single instruction like addition or multiplication is called an operation, so we measure the speed of supercomputers in terms of floating-point operations per second or Flop/s (sometimes written and said more simply as Flops).
 
-So how many Flops can a modern CPU-core perform? Let’s take a high-end processor like the AMD EPYC Zen2 (Rome) 7F32 CPU (which happens to be the processor used in the Snellius system at SURFsara). The way a processor is normally marketed is to quote its clock frequency, which here is 3.7 GHz. This is the rate at which each CPU-core operates. Clock speed is expressed in cycles per second (Hertz), and the prefix Giga means a billion (a thousand million), so this CPU-core is working at the almost mind-blowing rate of 3.7 billion cycles per second. Under favourable circumstances, an AMD EPYC CPU-core can perform 16 floating-point operations per cycle, which means each CPU-core can perform 16 x 3.7 billion = 59.2 billion floating-point operations per second.
+**So how many Flops can a modern CPU-core perform?** Let’s take a high-end processor like the AMD EPYC Zen2 (Rome) 7F32 CPU (which happens to be the processor used in the Snellius system at SURFsara). The way a processor is normally marketed is to quote its clock frequency: here is 3.7 GHz. This is the rate at which each CPU-core operates. Clock speed is expressed in cycles per second (Hertz), and the prefix Giga means a billion (a thousand million), so this CPU-core is working at the almost mind-blowing rate of 3.7 billion cycles per second. Under favourable circumstances, an AMD EPYC CPU-core can perform 16 floating-point operations per cycle, which means each CPU-core can perform 16 x 3.7 billion = 59.2 billion floating-point operations per second.
 
-So, the peak performance of one of our CPU-cores is 59.2 GFlops.
+So, the peak performance of one of our CPU-cores is **59.2 GFlops.**
 
 We say peak performance because this is the absolute maximum, never-to-be-exceeded figure which it is very hard to achieve in practice. However, it’s a very useful figure to know for reference.
 
+<!-- This formatting might not work... -->
+```{note}
 Clearly, with many thousands of CPU-cores we’re going to encounter some big numbers so here is a table summarising the standard abbreviations you’ll come across:
 
 |Ops per second  |	Scientific Notation | Prefix	| Unit |
@@ -57,13 +56,17 @@ Clearly, with many thousands of CPU-cores we’re going to encounter some big nu
 | 1 000 000 000 000 |	10^12 |	Tera |	Tflops |
 | 1 000 000 000 000 000 |	10^15 |	Peta |	Pflops |
 | 1 000 000 000 000 000 000 |	10^18 |	Exa | Eflops |
-
+```
 
 ### Benchmarking - Rpeak and Rmax 
 
 If we are going to compare performance we need some standard measure. To measure supercomputer performance the test drive is how fast it can run a standard program, and this process is called benchmarking.
 
-In the supercomputer world, two terminologies are often used to measure the performance of a system, **Rpeak** and **Rmax**. Rpeak is the theoretical peak performance, which is just the peak performance of a CPU-core multiplied by the total number of CPU-cores. Rmax is the maximum performance achieved while running the **LINPACK benchmark**. LINPACK involves running a standard mathematical computation called an LU factorisation on a very large square matrix of size Nmax by Nmax. The matrix is just a table of floating-point numbers, and the rules of the benchmark allow you to choose how big Nmax is. For example, when running the LINPACK benchmark ARCHER2 used a Nmax of 5,816,959 - imaging working with a spreadsheet with nearly 6 million rows and 6 million columnns! 
+In the supercomputer world, two terminologies are often used to measure the performance of a HPC system, **Rpeak** and **Rmax**: 
+* Rpeak is the theoretical peak performance, which is just the peak performance of a CPU-core multiplied by the total number of CPU-cores. 
+* Rmax is the maximum performance achieved while running the **LINPACK benchmark**. 
+
+LINPACK involves running a standard mathematical computation called an LU factorisation on a very large square matrix of size Nmax by Nmax. The matrix is just a table of floating-point numbers, and the rules of the benchmark allow you to choose how big Nmax is. For example, when running the LINPACK benchmark ARCHER2 used a Nmax of 5,816,959 - imaging working with a spreadsheet with nearly 6 million rows and 6 million columnns! 
 
 
 ## The Top500 list
@@ -75,8 +78,8 @@ The first Top500 list was published in June 1993, and since then the Top500 proj
 2. November at the [Supercomputing conference](https://sc23.supercomputing.org/) in the USA.
 
 As of June 2023 the fastest supercomputer is **Frontier**. This is a supercomputer in the US at the Oak Ridge National Laboratory with 135,936 total CPUs, each with 64 CPU-cores each with an overall total of 8,699,904 CPU-cores. Frontier has recorded: 
-* LINPACK performance (Rmax) of 1,194 PFlop/s = 1 194 000 000 000 000 Flop/s 
-* Theoretical Peak Performance (Rpeak) of 1,679.82 PFlop/s = 1 679 820 000 000 000 Flop/s
+* LINPACK performance (Rmax) of 1,194 PFlop/s = 1,194,000,000,000,000 Flop/s 
+* Theoretical Peak Performance (Rpeak) of 1,679.82 PFlop/s = 1,679,820,000,000,000 Flop/s
 * Power consumption of 22,703 kW = 22,703,000 W
 
 The Frontier system was the first supercomputer to record performance at the Exascale, recording an Rmax of 1,194 PFlop/s which is equivalent to 1.1 ExaFlop/s. Reaching the exascale ushers in a new era of supercomputing and is a significant point in the history of supercomputing. 
@@ -107,12 +110,13 @@ The word search contains 19 words that have been mentioned in the previous steps
 How did computers become so powerful so quickly? Are there any fundamental limits to how fast a supercomputer can be? To answer these questions, we need to understand what CPUs are made of.
 
 ### What is inside a CPU? 
+<!-- Image -->
 
 We measure the performance of a CPU-core based on the number of floating-point operations it can carry out per second, which in turn depends on the clock speed. CPUs are built from Integrated Circuits that consist of very large numbers of transistors. The transistors are connected by extremely small conducting wires which can carry an electric current. By controlling whether or not an electric current goes through certain conducting lines, we are able to encode information and perform calculations.
 
 Most transistors nowadays are created with silicon, a type of semiconductor. A semiconductor is a material that can act as both a conductor (a material that permits the flow of electrons) and an insulator (that inhibits electron flow), which is exactly the characteristics we want a transistor to have. The maximum physical size of a processor chip is limited to a few square centimetres, so to get a more complicated and powerful processor we need to make the transistors smaller.
 
-### Moore's Law 
+### Moore's law 
 
 In 1965, the co-founder of Fairchild Semiconductor and Intel, Gordon E. Moore, made an observation and forecast: he noticed that manufacturing processes were continually improving: 
 
@@ -120,7 +124,7 @@ In 1965, the co-founder of Fairchild Semiconductor and Intel, Gordon E. Moore, m
 
 Moore predicted that this would continue into the future. This observation is now called Moore’s law. Although it is really a forecast and not a fundamental law of nature, the prediction has been remarkably accurate for over 50 years: the first CPU from Intel (the i4004) introduced in 1971 had 2000 transistors, and Intel’s Core i7 CPU introduced in 2012 had 3 billion transistors. This is in excess of a million times more transistors, but is actually in line with what you would expect from the exponential growth of Moore’s law over around 40 years. 
 
-It turns out that, as we pack our transistors closer and closer together, every time we double the density of transistors we can double the frequency. So, although Moore’s law is actually a prediction about the density of transistors, for the first four decades it also meant that:
+It turns out that, packing our transistors closer and closer together and doubling the density, we also double the frequency. So, although Moore’s law is actually a prediction about the density of transistors, for the first four decades it also meant that:
 
 > **“Every two years the CPU clock frequency doubled.”**
 
